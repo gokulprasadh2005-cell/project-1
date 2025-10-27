@@ -1,0 +1,128 @@
+:root {
+  --accent: #ff7b00;
+  --accent2: #00b8a9;
+  --bg: #fdf8ff;
+  --muted: #4a4a4a;
+  --card: #ffffff;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Poppins', sans-serif; }
+
+body {
+  background: linear-gradient(180deg,#ffeaf0,#e8faff);
+  color: #222;
+  overflow-x: hidden;
+}
+
+header {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  background: rgba(255,255,255,0.9);
+  backdrop-filter: blur(10px);
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 15px 30px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  z-index: 1000;
+}
+
+.logo { font-weight: 700; font-size: 1.3rem; color: var(--accent); }
+nav a {
+  margin: 0 10px; color: #333; text-decoration: none; font-weight: 600;
+  cursor: pointer;
+}
+nav a:hover { color: var(--accent2); }
+
+main { padding-top: 80px; }
+
+section {
+  display: none;
+  min-height: 90vh;
+  padding: 60px 10%;
+  animation: fadeIn 0.6s ease;
+}
+section.active { display: block; }
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.hero {
+  background: url('https://images.pexels.com/photos/271639/pexels-photo-271639.jpeg?auto=compress&cs=tinysrgb&w=1600') center/cover no-repeat;
+  height: 90vh;
+  display: flex; align-items: center; justify-content: center;
+  color: white; text-align: center; position: relative;
+}
+.hero::after {
+  content: ''; position: absolute; inset: 0; background: rgba(0,0,0,0.4);
+}
+.hero-content { position: relative; z-index: 1; max-width: 700px; }
+.hero h1 { font-size: 3rem; }
+.hero p { margin: 15px 0 25px; }
+
+.btn {
+  background: var(--accent);
+  border: none; color: white;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.btn:hover { background: var(--accent2); }
+
+h2 {
+  text-align: center;
+  font-size: 2rem;
+  color: var(--accent);
+  margin-bottom: 30px;
+}
+
+.rooms, .gallery, .spa-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(280px,1fr));
+  gap: 20px;
+}
+
+.room, .spa-item {
+  background: white;
+  border-radius: 14px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+  overflow: hidden;
+  transition: transform 0.3s;
+}
+.room:hover, .spa-item:hover { transform: scale(1.03); }
+
+.room img, .gallery img, .spa-item img { width: 100%; height: 200px; object-fit: cover; border-radius:12px; margin-bottom:10px; }
+.room-info, .spa-item { padding: 15px; text-align: center; }
+.spa-item h3 { color: var(--accent2); }
+
+.gallery img { border-radius: 12px; transition: transform 0.3s; }
+.gallery img:hover { transform: scale(1.05); }
+
+form {
+  background: var(--card);
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 30px;
+  border-radius: 14px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+}
+
+form input, form select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+footer {
+  background: var(--accent);
+  color: white;
+  text-align: center;
+  padding: 20px;
+  margin-top: 30px;
+}
+
+.contact-info { text-align:center; color:var(--muted); }

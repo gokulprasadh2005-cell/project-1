@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Azure Bliss Hotel & Spa</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="logo">Azure Bliss 🌸</div>
+    <nav>
+      <a onclick="navigate('home')">Home</a>
+      <a onclick="navigate('rooms')">Rooms</a>
+      <a onclick="navigate('spa')">Spa</a>
+      <a onclick="navigate('gallery')">Gallery</a>
+      <a onclick="navigate('contact')">Contact</a>
+    </nav>
+  </header>
+  <main>
+    <!-- HOME -->
+    <section id="home" class="active">
+      <div class="hero">
+        <div class="hero-content">
+          <h1>Welcome to Azure Bliss Hotel & Spa</h1>
+          <p>Where vibrant comfort meets colorful relaxation. Escape into serenity today!</p>
+          <button class="btn" onclick="navigate('rooms')">Explore Rooms</button>
+        </div>
+      </div>
+    </section>
+	 <!-- ROOMS -->
+    <section id="rooms">
+      <h2>Our Rooms</h2>
+      <div class="rooms">
+        <div class="room">
+          <img src="https://images.pexels.com/photos/271624/pexels-photo-271624.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Deluxe Room">
+          <div class="room-info">
+            <h3>Deluxe Room</h3>
+            <p>Luxury interiors with bright décor and sea view balcony.</p>
+          </div>
+        </div>
+        <div class="room">
+          <img src="https://images.pexels.com/photos/338504/pexels-photo-338504.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Ocean Site Room">
+          <div class="room-info">
+            <h3>Ocean Site Room</h3>
+            <p>Spacious suite with jacuzzi and private terrace.</p>
+          </div>
+        </div>
+        <div class="room">
+          <img src="https://images.pexels.com/photos/1571460/pexels-photo-1571460.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Garden Room">
+          <div class="room-info">
+            <h3>Garden Room</h3>
+            <p>Colorful retreat surrounded by nature and vibrant gardens.</p>
+          </div>
+        </div>
+      </div>
+      <div style="text-align:center;margin-top:20px;">
+        <button class="btn" onclick="navigate('booking')">Book Now</button>
+      </div>
+    </section>
+	 <!-- SPA -->
+    <section id="spa">
+      <h2>Spa & Wellness</h2>
+      <div class="spa-cards">
+        <div class="spa-item">
+          <img src="https://images.pexels.com/photos/4056530/pexels-photo-4056530.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Aromatherapy Session">
+          <h3>🌺 Aromatherapy</h3>
+          <p>Relax your senses with essential oils and gentle massage techniques.</p>
+        </div>
+        <div class="spa-item">
+          <img src="https://images.pexels.com/photos/3822622/pexels-photo-3822622.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Deep Tissue Massage">
+          <h3>💆 Deep Tissue</h3>
+          <p>Rejuvenate with our signature deep tissue massage therapy.</p>
+        </div>
+        <div class="spa-item">
+          <img src="https://images.pexels.com/photos/5632373/pexels-photo-5632373.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Hydrotherapy Pool">
+          <h3>🛀 Hydrotherapy</h3>
+          <p>Unwind in soothing water jets and mineral pools designed for wellness.</p>
+        </div>
+      </div>
+    </section>
+	<!-- GALLERY -->
+    <section id="gallery">
+      <h2>Gallery</h2>
+      <div class="gallery">
+        <img src="https://images.pexels.com/photos/261102/pexels-photo-261102.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Hotel Lobby">
+        <img src="https://images.pexels.com/photos/271639/pexels-photo-271639.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Hotel Exterior">
+        <img src="https://images.pexels.com/photos/1457842/pexels-photo-1457842.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Spa Area">
+        <img src="https://images.pexels.com/photos/271624/pexels-photo-271624.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Deluxe Room">
+        <img src="https://images.pexels.com/photos/338504/pexels-photo-338504.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Ocean Suite">
+
+</div>
+
+    </section>
+	 <!-- CONTACT -->
+    <section id="contact">
+      <h2>Contact Us</h2>
+      <p class="contact-info">📍 123 Serenity Lane, Coastal Town<br>☎ +91 98765 43210 · ✉ hello@azurebliss.example</p>
+      <div style="text-align:center;margin-top:20px;">
+        <button class="btn" onclick="navigate('booking')">Book Now</button>
+      </div>
+    </section>
+	 <!-- BOOKING -->
+    <section id="booking">
+      <h2>Booking Details</h2>
+      <form id="bookingForm">
+        <input type="text" id="name" placeholder="Full Name" required>
+        <input type="email" id="email" placeholder="Email Address" required>
+        <input type="tel" id="phone" placeholder="Phone Number" required>
+        <select id="roomType" required>
+          <option value="">Select Room Type</option>
+          <option>Deluxe Room</option>
+          <option>Ocean Suite</option>
+          <option>Garden Room</option>
+        </select>
+        <label>Check-in Date</label>
+        <input type="date" id="checkin" required>
+        <label>Check-out Date</label>
+        <input type="date" id="checkout" required>
+        <button class="btn" type="submit">Confirm Booking</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 Azure Bliss Hotel & Spa · Designed with ❤️ for comfort and color</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
+	
